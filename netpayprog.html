@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Net Pay Program</title>
+</head>
+
+<body>
+    <h1>NET Pay Program</h1>
+    <p>Simple NET pay calculator. It takes your GROSS pay and then deducts Federal, State, and  FICA. It has the option to deduct any additional amount from your check. Then it displayes your NET pay.
+        Fed = 15%
+        State = 5%
+        FICA = 7.62%
+    </p>
+    <ol>
+        <li>START</li>
+        <li>Declare GROSSPAY</li>
+        <li>Display "What is your gross pay per year?"</li>
+        <li>input real GROSSPAY</li>
+        <li>Declare Fed</li>
+        <li>Declare State</li>
+        <li>Declare FICA</li>
+        <li>Declare NET</li>
+        <li>set Ded = 0</li>
+        <li>Set Fed = GROSSPAY * .15</li>
+        <li>Set State = GROSSPAY * .05</li>
+        <li>Set FICA = GROSSPAY * .0762</li>
+        <li>Display "Enter any additional payments that have to be deducted from check."</li>
+        <li>input real ADDpayments</li>
+        <li>Set NET = GROSSPAY - (Fed + State + FICA + Ded)</li>
+        <li>DISPLAY "Your net pay is" + NET +"."</li>
+        <li>END</li>
+    </ol>
+    <form action="#" onsubmit="netpay()" >
+    <p>Enter your gross amount.</p>
+    <input type="text" name="gross" id="gross">
+    <p>Enter any additional deductions.</p>
+    <input type="text" name="ded" id="ded">
+    <input type="submit" value="submit">
+    </form>
+    <p>This program calculates your net pay after Federal, State, FICA, and any other deductions are taken out.Your net pay would be <em><span id="output"></span></em><script  src="net.js"></script>.</p>
+</body>
+</html> 

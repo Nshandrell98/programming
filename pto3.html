@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>A simple PTO calc that uses how many years you worked to get a correct PTO rate. Then uses how many weeks you have worked so far this year to calculate  total PTO to date. Then deducts any PTO you have taken to date.</p>
+    <ol>
+        <li>START</li>
+        <li>Declarations</li>
+            <ol>
+                <li>wksWrkd</li>
+                <li>yrsWrkd</li>
+                <li>hrsPerCk</li>
+                <li>totHrsToDate</li>
+                <li>totPTO</li>
+                <li>hrsLeft</li>
+            </ol>
+        <li>Display "How many years have you worked?"</li>
+        <li>INPUT yrsWrkd</li>
+        <li>If yrsWrkd is greater than 0 but less than 5 , hrsPerCk = 5</li>
+        <li>If yrsWrkd is 5 or greater, hrsPerCk = 6</li>
+        <li>If yrsWrkd is 10 or greater, hrsPerCk = 7</li>
+        <li>Set totPTO = hrsPerCk * 26</li>
+        <li>Display "How many weeks have you worked so far this year?" </li>
+        <li>INPUT wksWrkd</li>
+        <li>Set totHrsToDate = hrsPerCk * wksWrkd</li>
+        <li>Set hrsLeft = totPTO - totHrsToDate</li>
+    </ol>
+    <form action="#" onsubmit="pto()" >
+        <p>Enter how many years have you worked?</p>
+        <input type="text" name="gross" id="gross">
+        <p>Enter any additional deductions.</p>
+        <input type="text" name="ded" id="ded">
+        <input type="submit" value="submit">
+        </form>
+</body>
+</html>
