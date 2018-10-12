@@ -30,12 +30,20 @@
         <li>Set totHrsToDate = hrsPerCk * wksWrkd</li>
         <li>Set hrsLeft = totPTO - totHrsToDate</li>
     </ol>
+
     <form action="#" onsubmit="pto()" >
         <p>Enter how many years have you worked?</p>
-        <input type="text" name="gross" id="gross">
-        <p>Enter any additional deductions.</p>
-        <input type="text" name="ded" id="ded">
+        <input type="text" name="yrsWrkd" id="yrsWrkd">
+        <p>Enter how many weeks you have worked so far.</p>
+        <input type="text" name="wksWrkd" id="wksWrkd">
+        <p>Enter any PTO you have taken so far this year</p>
+        <input type="text" name="ptoTkn" id="ptoTkn">
+        <p>How would you like your results?</p>
+        <input type="radio" name="HDW" value=1 id="ptoHours">Hours
+        <input type="radio" name="HDW" value=2 id="ptoDays">Days
+        <input type="radio" name="HDW" value=3 id="ptoWeeks">Weeks
         <input type="submit" value="submit">
-        </form>
+    </form>
+        <p>Your total PTO in hours is<em><span id="output"></span></em><script  src="pto3.js"></script>.</p></p>
 </body>
 </html>
