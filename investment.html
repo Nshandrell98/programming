@@ -7,23 +7,35 @@
     <title>Document</title>
 </head>
 <body>
-   <h1>Simple investment calculator</h1>
+   <h1>Simple inevstment calculator</h1>
+   <h1>Simple Investment Calculator</h1>
 
-    <p>A simple investment calculator that takes an initial investment amount in dollars. Then accepts an interest rate between 2-7%. Then takes an additional amount of money for each term of the investment. Enter a investment term. Then specify that the term will be in years or months. Result will be your total interest earned and the total amount in your account.</p>
+    <p>A simple investment calculator that takes an initial investment amount in dollars. Then accepts an interest rate between 2-7%. Then takes an additional amount of money for each term of the investment. Enter a investment term(ie. how long). Then specify that the term will be in years or months. Result will be your total interest earned and the total amount in your account.</p>
 
     <ol>
 
         <li>START</li>
+
         <li>DISPLAY "Enter in your initial investment amount"</li>
+
         <li>INPUT inInvestment</li>
+
         <li>SELECT "2-7%"</li>
+
         <li>DISPLAY "Enter in your additional amount for the investment term"</li>
+
         <li>INPUT additional</li>
+
         <li>DISPLAY "Enter in how long your investment term is"</li>
+
         <li>INPUT investment term</li>
+
         <li>SELECT "investment term"</li>
+
         <li>DISPLAY "total interest + total amount + additional"</li>
+
         <li>END</li>
+
     </ol>
     <hr>
     <form action="#" onsubmit="invCalc()">
@@ -64,7 +76,7 @@
                 output.innerHTML = "Your total interest for the term is <span>" + interest.toFixed(2) + "</span> and your account balance is <span>" + totalAmount + "</span> .";
             }
             if (termType == "years") {
-                output.innerHTML = "Your total interest for the term is <span>" + interest.toFixed(2) + "</span> and your account balance is <span>" + (totalAmount * 12)+ "</span> .";
+                output.innerHTML = "Your total interest for the term is <span>" + interest.toFixed(2) + "</span> and your account balance is <span>" + totalAmount + "</span> .";
             }
         }
     </script>
