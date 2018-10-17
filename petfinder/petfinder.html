@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li>Display "Is it a mammal?"
+            <ol>
+                <li>if yes, Display "Is it a small mammal?"
+                    <ol>
+                        <li>if yes, Display "Does it hop?"
+                            <ol>
+                                <li>if yes, Display "Its a RABBIT"!</li>
+                                <li>if no, Display "It is a hamster."</li>
+                            </ol>
+                        </li>
+                        <li>If no Display "Does it bark?
+                            <ol>
+                                <li>If yes, It is a dog.</li>
+                                <li>If no, it is a cat.</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li>if no, "Do you have scales?"
+                    <ol>
+                        <li>if yes, Display "do you haave fins?"
+                            <ol>
+                                <li>if yes, It is a fish</li>
+                                <li>If no, it a snake</li>
+                            </ol>
+                        </li>
+                        <li>if no, Display "Is it an arachnid?"
+                            <ol>
+                                <li>if yes, It is a spider</li>
+                                <li>if no, it is a parrot</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+    </ol>
+    <h1>Find My Pet</h1>
+    <input type="submit" value="Start" onclick = "petfinder()">
+    <script>
+        function petfinder(){
+        var pet= "";
+        var question1 = "Is your animal a mammal? yes or no";
+        var question2 = "Is your animal a small mammal? YES/NO";
+        var question3 = "Does your animal hop? yes or no";
+        var question4 = "Does your animal bark? yes or no"; 
+        var question5 = "Does your animal have scales? yes or no";
+        var question6 = "Does your animal have fins? yes or no";
+        var question7 = "Is your animal an arachnid? yes or no";
+
+        var g = prompt("Is your animal a mammal YES/NO ?");
+        if (g.toLowerCase() == "yes"){
+            t = prompt(question2);
+            if (t.toLowerCase() == "yes"){
+                r = prompt(question3);
+                if (r.toLowerCase() == "yes"){
+                    pet = "rabbit";
+                    alert("Your animal is a rabbit!");
+                    console.log(pet)
+                }
+                if (r.toLowerCase() == "no"){
+                    pet = "hamster";
+                    alert("Your animal is a hammster!");
+                    console.log(pet)
+                }
+            }
+            if (t.toLowerCase() == "no"){
+                y = prompt(question4);
+                if (y.toLowerCase() == "yes"){
+                    pet = "dog";
+                    alert("Your animal is a dog!");
+                    console.log(pet)
+                }
+                if (y.toLowerCase() == "no"){
+                    pet = "cat";
+                    alert("Your animal is a cat!");
+                    console.log(pet)
+                }
+            }
+        }
+        if (g.toLowerCase() == "no"){
+            z = prompt(question5);
+            if (z.toLowerCase() == "yes"){
+               q = prompt(question6);
+                if (q.toLowerCase() == "yes"){
+                    pet = "fish";
+                    alert("Your animal is a fish!");
+                    console.log(pet)
+                }
+                if (q.toLowerCase() == "no"){
+                    pet = "snake";
+                    alert("Your animal is a snake!");
+                    console.log(pet)
+                }
+            }
+            if (z.toLowerCase() == "no"){
+               w = prompt(question7);
+                if (w.toLowerCase() == "yes"){
+                    pet = "spider";
+                    alert("Your animal is a spider!");
+                    console.log(pet)
+                }
+                if (w.toLowerCase() == "no"){
+                    pet = "parrot";
+                    alert("Your animal is a parrot!");
+                    console.log(pet)
+                }
+            }
+        }
+    }
+    </script>
+    <script>petfinder();</script>
+</body>
+</html>

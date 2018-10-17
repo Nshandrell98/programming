@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PTO PROGRAM</h1>
+    <p>This program calculates your paid time off given how many years you worked.</p>
+    <ol>
+        <li>If yrsWrkd is greater than 0 but less than 5 , hrsPerCk = 5</li>
+        <li>If yrsWrkd is 5 or greater, hrsPerCk = 6</li>
+        <li>If yrsWrkd is 10 or greater, hrsPerCk = 7</li>
+    </ol>
+    <form action="#" onsubmit="pto2()" >
+        <p>Enter how many years have you worked?</p>
+        <input type="text" name="yrsWrkd" id="yrsWrkd">
+        <input type="submit" value="submit">
+    </form>
+    <p>Your total PTO in hours is <em><span id="output"></span></em></p>
+    <script>
+        function pto2(){
+            event.preventDefault();
+            var output = document.getElementById("output");
+            var yrsWrkd = parseInt(document.getElementById("yrsWrkd").value);
+            var hrsPerCk;
+            if (yrsWrkd < 5 ){
+                hrsPerCk = 5;
+            }
+            if (yrsWrkd >= 5){
+                hrsPerCk = 6;
+            }
+            if (yrsWrkd >= 10){
+                hrsPerCk = 7;
+            }
+            var yearlyPTO = hrsPerCk * 26;
+            output.textContent = yearlyPTO
+        }
+            
+    </script>
+</body>
+</html>
