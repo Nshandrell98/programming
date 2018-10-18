@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hero Generator</title>
+</head>
+<body onload="herogen();">
+    <h1>Random hero generator</h1>
+    <div id="output"></div>
+    <script>
+        function herogen() {
+            var adjs = ["The Wonderful ", "The Mighty ", "The Responsible ", "The Humane ", "The Magnificent "];
+            var name = ["Kirby ", "SuperMan ", "WonderWoman ", "Preist ", "Jedi "];
+            var power = ["swallows everything!", "runs faster than the speed of light!", "flies.", "can summon demons.", "has a deafening screech that could blow your eardrums!"];
+            var output = document.getElementById("output");
+
+            output.textContent = adjs[genRandom()] + name[genRandom()] + power[genRandom()];
+
+        }
+        function genRandom(){
+            return Math.round(Math.random() * 4);
+        }
+    </script>
+</body>
+</html>
